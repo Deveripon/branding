@@ -1,0 +1,148 @@
+.navigation-section {
+	background-color: $main_color;
+	.navigation {
+		margin-left: 50px;
+		.branding {
+			padding: 10px 0px;
+			margin-top: 5px;
+			/* @media all and (max-width: 768px) {
+				margin-left: 50px;
+			} */
+			a {
+				color: #fff;
+				text-decoration: none;
+				font-family: "Raleway", sans-serif;
+				font-weight: 600;
+				letter-spacing: 1px;
+				font-size: 25px;
+
+				@media all and (max-width: 992px) {
+					font-size: 20px;
+				}
+			}
+		}
+		.nav-toggle-icon {
+			cursor: pointer;
+			display: none;
+			@media all and (max-width: 769px) {
+				display: block;
+				margin-top: 8px;
+				margin-right: 50px;
+			}
+			i {
+				color: #fff;
+				padding: 5px;
+				border: 1px solid #fff;
+				border-radius: 5px;
+				cursor: pointer;
+				margin-top: 10px;
+			}
+		}
+		.nav {
+			float: right;
+			@media all and (max-width: 768px) {
+				float: none;
+				width: 100%;
+				display: inline-block;
+			}
+			.active {
+				display: block;
+			}
+
+			ul {
+				list-style: none;
+				display: flex;
+				justify-content: flex-end;
+				transition: 0.5s;
+				@media all and (max-width: 768px) {
+					display: block;
+					text-align: center;
+					margin: auto;
+					justify-content: center;
+				}
+				@media all and (max-width: 768px) {
+					display: none;
+				}
+			}
+			li {
+				padding: 20px 30px;
+				border-right: 1px solid $secondary_color;
+				transition: 0.5s;
+				cursor: pointer;
+				font-size: 15px;
+				font-weight: 400;
+				position: relative;
+				&:hover .sub-menu{
+					display: block;
+				}
+				@media all and (max-width: 805px) {
+					padding: 10px;
+					font-size: 12px;
+					font-weight: 500;
+				}
+				@media all and (max-width: 768px) {
+					background-color: transparent;
+					border-right: 0;
+				}
+
+				&:hover {
+					background-color: $secondary_color;
+					@media all and (max-width: 768px) {
+						background-color: transparent;
+					}
+				}
+				@media all and (max-width: 992px) {
+					padding: 20px 20px;
+				}
+				a {
+					text-decoration: none;
+					color: #fff;
+					transition: 0.2s;
+					&:hover {
+						@media all and (max-width: 768px) {
+							background-color: $secondary_color;
+							padding: 20px 40px;
+						}
+					}
+				}
+				.sub-menu{
+					display: none;
+					border: none;
+					position: absolute;
+					top: 100%;
+					left: 0;
+					background-color: aqua;
+					margin: 0;
+					padding: 0;
+                    border-radius: 0;
+					display: none;
+					@media all and (max-width: 769px) {
+						position: absolute;
+						left: 60%;
+						top: 0;
+						z-index: 88;
+						
+					}
+					
+					li{
+						border: none;
+						&:hover {
+							background-color: $text_info;
+							
+						}
+						@media all and (max-width: 769px) {
+						border-bottom: 1px solid $main_color;
+						
+					a{
+						margin: 0;
+						padding: 0;
+                        }
+					
+					}
+					}
+					
+				}
+			}
+		}
+	}
+}
